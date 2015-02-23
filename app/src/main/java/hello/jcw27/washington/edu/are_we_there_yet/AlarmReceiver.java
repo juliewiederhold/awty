@@ -1,13 +1,8 @@
 package hello.jcw27.washington.edu.are_we_there_yet;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.Toast;
 
 

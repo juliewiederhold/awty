@@ -40,12 +40,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 TextView button = (TextView) findViewById(R.id.start);
+                int number = Integer.parseInt(duration.getText().toString());
                 if(button.getText().toString().equals("Start")){
                     if(message.getText().toString().length() > 0 && phoneNumber.getText().toString().length() == 10
-                            && duration.getText().toString().length() > 0){
+                            && number > 0){
                        String number_and_message = "(" + phoneNumber.getText().toString().substring(0, 3) + ")"
-                               + phoneNumber.getText().toString().substring(3, 6) + "-" +phoneNumber.getText().toString().substring(6, 10) + ": " + message.getText().toString();
-                        int number = Integer.parseInt(duration.getText().toString());
+                               + phoneNumber.getText().toString().substring(3, 6) + "-" + phoneNumber.getText().toString().substring(6, 10) + ": "
+                               + message.getText().toString();
                         interval = 1000 * 60 * number;
 
                         alarmIntent.putExtra("message", number_and_message);
